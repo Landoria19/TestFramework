@@ -59,7 +59,7 @@ public class ConfigFileReader {
 		String browserName = properties.getProperty("browser");
 		if(browserName == null || browserName.equals("chrome")) return DriverType.CHROME;
 		else if(browserName.equalsIgnoreCase("firefox")) return DriverType.FIREFOX;
-		else if(browserName.equals("iexplorer")) return DriverType.INTERNETEXPLORER;
+		//else if(browserName.equals("iexplorer")) return DriverType.INTERNETEXPLORER;
 		else throw new RuntimeException("Browser Name Key value in Configuration.properties is not matched : " + browserName);
 	}
 
@@ -80,6 +80,14 @@ public class ConfigFileReader {
 		String testDataResourcePath = properties.getProperty("testDataResourcePath");
 		if(testDataResourcePath!= null) return testDataResourcePath;
 		else throw new RuntimeException("Test Data Resource Path not specified in the Configuration.properties file for the Key:testDataResourcePath");		
+	}
+	
+	public String getSeleniumHub() {
+		String seleniumHub = properties.getProperty("seleniumHub");
+		if (seleniumHub != null)
+			return seleniumHub;
+		else
+			throw new RuntimeException("seleniumHub not specified in the Configuration.properties file.");
 	}
 	
 }
