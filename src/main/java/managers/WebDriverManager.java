@@ -38,7 +38,8 @@ public class WebDriverManager {
 //		FileWriterManager.getInstance().getExtentWriter().setProperty("extent.reporter.spark.out", "target/cucumber-reports/report-"+String.valueOf(calendar.getTimeInMillis())+"-"+driverRunInfo+".html");		
 //		}catch(IOException e){
 //			System.out.println("Error while writing in extent properties file "+e);
-//		}
+////		}
+		
 		return driver;
 	}
 
