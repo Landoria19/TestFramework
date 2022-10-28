@@ -2,7 +2,9 @@ package stepDefinitions;
 
 import cucumber.TestContext;
 import io.cucumber.java.After;
+import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
+import io.cucumber.java.BeforeAll;
 
 public class Hooks {
 	TestContext testContext;
@@ -11,9 +13,14 @@ public class Hooks {
 		testContext = context;
 	}
 
+	@BeforeAll
+	public static void beforeAll() {
+		System.out.println("before all scenarios executed here");
+	}
+	
 	@Before
 	//executed before each scenario
-	public void BeforeSteps() {
+	public void beforeSteps() {
 		System.out.println("beforesteps executed here");
 		/*What all you can perform here
 			Starting a webdriver
@@ -27,8 +34,13 @@ public class Hooks {
 
 	@After
 	//executed after each scenario
-	public void AfterSteps() {
+	public void afterSteps() {
 		System.out.println("aftersteps executed here");
 		testContext.getWebDriverManager().quitDriver();
+	}
+	
+	@AfterAll
+	public static void afterAll() {
+		System.out.println("after all scenarios executed here");
 	}
 }
