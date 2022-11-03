@@ -64,7 +64,6 @@ public class WebDriverManager {
 				break;
 			case CHROME:
 				ChromeOptions chromeOptions = new ChromeOptions();
-				// for selenium grid
 				// chromeOptions.setPlatformName("WIN10");
 				driver = new RemoteWebDriver(new URL(FileReaderManager.getInstance().getConfigReader().getSeleniumHub()), chromeOptions);
 				break;
