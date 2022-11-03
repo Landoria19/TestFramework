@@ -1,11 +1,11 @@
-extent.reporter.spark.out=ChromeOnLinux1.html
+extent.reporter.spark.out=FirefoxOnLinux1.html
 extent.reporter.spark.start=true
 
 extent.reporter.html.start=true
-extent.reporter.html.out=ChromeOnLinux2.html
+extent.reporter.html.out=FirefoxOnLinux2.html
 
 screenshot.dir=target/
 screenshot.rel.path=../
 
-basefolder.name=reports
+basefolder.name=reports/reports
 basefolder.datetimepattern=d-MMM-YY HH-mm-ss-SSS

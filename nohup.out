@@ -1,0 +1,729 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< ToolsQA:CucumberFramework >----------------------
+[INFO] Building CucumberFramework 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ CucumberFramework ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Workspace\CucumberFramework\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ CucumberFramework ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ CucumberFramework ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ CucumberFramework ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ CucumberFramework ---
+[INFO] Surefire report directory: C:\Workspace\CucumberFramework\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running runners.TestRunner
+before all scenarios executed here
+
+Scenario Outline: Customer place an order by purchasing an item from search # src/test/resources/functionalTests/End2End_Tests.feature:17
+Oct 28, 2022 11:39:46 AM org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer createTracer
+INFO: Using OpenTelemetry for tracing
+log4j:WARN No appenders could be found for logger (io.netty.util.internal.logging.InternalLoggerFactory).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Oct 28, 2022 11:39:46 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected upstream dialect: W3C
+beforesteps executed here
+  Given user is on Home Page                                                # stepDefinitions.HomePageSteps.user_is_on_Home_Page()
+  When he search for "dress"                                                # stepDefinitions.HomePageSteps.he_search_for(java.lang.String)
+  And choose to buy the first item                                          # stepDefinitions.ProductPageSteps.choose_to_buy_the_first_item()
+      org.openqa.selenium.WebDriverException: unknown error: session deleted because of page crash
+from tab crashed
+  (Session info: chrome=94.0.4606.61)
+Build info: version: '4.5.0', revision: 'fe167b119a'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [b6a309edbee0b4e706e3133278d777dd, clickElement {id=987c4f77-970d-402a-8d68-977fc98f1009}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.61, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: /tmp/.com.google.Chrome.3v7Bvv}, goog:chromeOptions: {debuggerAddress: localhost:38275}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: b6a309edbee0b4e706e3133278d...}
+Element: [[RemoteWebDriver: chrome on LINUX (b6a309edbee0b4e706e3133278d777dd)] -> css selector: button.single_add_to_cart_button]
+Session ID: b6a309edbee0b4e706e3133278d777dd
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy27.click(Unknown Source)
+	at pageObjects.ProductListingPage.clickOn_AddToCart(ProductListingPage.java:26)
+	at stepDefinitions.ProductPageSteps.choose_to_buy_the_first_item(ProductPageSteps.java:23)
+	at ✽.choose to buy the first item(file:///C:/Workspace/CucumberFramework/src/test/resources/functionalTests/End2End_Tests.feature:7)
+
+  And moves to checkout from mini cart                                      # stepDefinitions.CartPageSteps.moves_to_checkout_from_mini_cart()
+  And enter "Lakshay" personal details on checkout page                     # stepDefinitions.CheckoutPageSteps.enter_personal_details_on_checkout_page(java.lang.String)
+  And select same delivery address                                          # stepDefinitions.CheckoutPageSteps.select_same_delivery_address()
+  And select payment method as "check" payment                              # stepDefinitions.CheckoutPageSteps.select_payment_method_as_payment(java.lang.String)
+  And place the order                                                       # stepDefinitions.CheckoutPageSteps.place_the_order()
+  Then verify the order details                                             # stepDefinitions.ConfirmationPageSteps.verify_the_order_details()
+aftersteps executed here
+
+@second
+Scenario: second scenario    # src/test/resources/functionalTests/End2End_Tests.feature:20
+Oct 28, 2022 11:39:50 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected upstream dialect: W3C
+beforesteps executed here
+  Given user is on Home Page # stepDefinitions.HomePageSteps.user_is_on_Home_Page()
+  When he search for "dress" # stepDefinitions.HomePageSteps.he_search_for(java.lang.String)
+aftersteps executed here
+after all scenarios executed here
+?????????????????????????????????????????????????????????????????????????????????????
+? Share your Cucumber Report with your team at https://reports.cucumber.io          ?
+? Activate publishing with one of the following:                                    ?
+?                                                                                   ?
+? src/test/resources/cucumber.properties:          cucumber.publish.enabled=true    ?
+? src/test/resources/junit-platform.properties:    cucumber.publish.enabled=true    ?
+? Environment variable:                            CUCUMBER_PUBLISH_ENABLED=true    ?
+? JUnit:                                           @CucumberOptions(publish = true) ?
+?                                                                                   ?
+? More information at https://cucumber.io/docs/cucumber/environment-variables/      ?
+?                                                                                   ?
+? Disable this message with one of the following:                                   ?
+?                                                                                   ?
+? src/test/resources/cucumber.properties:          cucumber.publish.quiet=true      ?
+? src/test/resources/junit-platform.properties:    cucumber.publish.quiet=true      ?
+?????????????????????????????????????????????????????????????????????????????????????
+Tests run: 13, Failures: 0, Errors: 2, Skipped: 6, Time elapsed: 9.146 sec <<< FAILURE!
+choose to buy the first item(Customer place an order by purchasing an item from search)  Time elapsed: 1.439 sec  <<< ERROR!
+org.openqa.selenium.WebDriverException: unknown error: session deleted because of page crash
+from tab crashed
+  (Session info: chrome=94.0.4606.61)
+Build info: version: '4.5.0', revision: 'fe167b119a'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [b6a309edbee0b4e706e3133278d777dd, clickElement {id=987c4f77-970d-402a-8d68-977fc98f1009}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.61, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: /tmp/.com.google.Chrome.3v7Bvv}, goog:chromeOptions: {debuggerAddress: localhost:38275}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: b6a309edbee0b4e706e3133278d...}
+Element: [[RemoteWebDriver: chrome on LINUX (b6a309edbee0b4e706e3133278d777dd)] -> css selector: button.single_add_to_cart_button]
+Session ID: b6a309edbee0b4e706e3133278d777dd
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy27.click(Unknown Source)
+	at pageObjects.ProductListingPage.clickOn_AddToCart(ProductListingPage.java:26)
+	at stepDefinitions.ProductPageSteps.choose_to_buy_the_first_item(ProductPageSteps.java:23)
+	at ?.choose to buy the first item(file:///C:/Workspace/CucumberFramework/src/test/resources/functionalTests/End2End_Tests.feature:7)
+
+Customer place an order by purchasing an item from search  Time elapsed: 0.017 sec  <<< ERROR!
+org.openqa.selenium.WebDriverException: unknown error: session deleted because of page crash
+from tab crashed
+  (Session info: chrome=94.0.4606.61)
+Build info: version: '4.5.0', revision: 'fe167b119a'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [b6a309edbee0b4e706e3133278d777dd, clickElement {id=987c4f77-970d-402a-8d68-977fc98f1009}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.61, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: /tmp/.com.google.Chrome.3v7Bvv}, goog:chromeOptions: {debuggerAddress: localhost:38275}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: b6a309edbee0b4e706e3133278d...}
+Element: [[RemoteWebDriver: chrome on LINUX (b6a309edbee0b4e706e3133278d777dd)] -> css selector: button.single_add_to_cart_button]
+Session ID: b6a309edbee0b4e706e3133278d777dd
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy27.click(Unknown Source)
+	at pageObjects.ProductListingPage.clickOn_AddToCart(ProductListingPage.java:26)
+	at stepDefinitions.ProductPageSteps.choose_to_buy_the_first_item(ProductPageSteps.java:23)
+	at ?.choose to buy the first item(file:///C:/Workspace/CucumberFramework/src/test/resources/functionalTests/End2End_Tests.feature:7)
+
+
+Results :
+
+Tests in error: 
+  choose to buy the first item(Customer place an order by purchasing an item from search): unknown error: session deleted because of page crash(..)
+  Customer place an order by purchasing an item from search: unknown error: session deleted because of page crash(..)
+
+Tests run: 13, Failures: 0, Errors: 2, Skipped: 6
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  11.317 s
+[INFO] Finished at: 2022-10-28T11:39:54+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test (default-test) on project CucumberFramework: There are test failures.
+[ERROR] 
+[ERROR] Please refer to C:\Workspace\CucumberFramework\target\surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< ToolsQA:CucumberFramework >----------------------
+[INFO] Building CucumberFramework 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ CucumberFramework ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Workspace\CucumberFramework\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ CucumberFramework ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ CucumberFramework ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ CucumberFramework ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ CucumberFramework ---
+[INFO] Surefire report directory: C:\Workspace\CucumberFramework\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running runners.TestRunner
+before all scenarios executed here
+
+Scenario Outline: Customer place an order by purchasing an item from search # src/test/resources/functionalTests/End2End_Tests.feature:17
+Oct 28, 2022 11:39:58 AM org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer createTracer
+INFO: Using OpenTelemetry for tracing
+log4j:WARN No appenders could be found for logger (io.netty.util.internal.logging.InternalLoggerFactory).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Oct 28, 2022 11:39:59 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected upstream dialect: W3C
+beforesteps executed here
+  Given user is on Home Page                                                # stepDefinitions.HomePageSteps.user_is_on_Home_Page()
+  When he search for "dress"                                                # stepDefinitions.HomePageSteps.he_search_for(java.lang.String)
+  And choose to buy the first item                                          # stepDefinitions.ProductPageSteps.choose_to_buy_the_first_item()
+      org.openqa.selenium.WebDriverException: unknown error: session deleted because of page crash
+from tab crashed
+  (Session info: chrome=94.0.4606.61)
+Build info: version: '4.5.0', revision: 'fe167b119a'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [fc82c2be0636520e8958bd43cc0a4c0a, clickElement {id=bb603f79-c9e9-47f3-b898-8c76213a6a54}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.61, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: /tmp/.com.google.Chrome.A6Fuxu}, goog:chromeOptions: {debuggerAddress: localhost:42123}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: fc82c2be0636520e8958bd43cc0...}
+Element: [[RemoteWebDriver: chrome on LINUX (fc82c2be0636520e8958bd43cc0a4c0a)] -> css selector: .noo-product-inner]
+Session ID: fc82c2be0636520e8958bd43cc0a4c0a
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at pageObjects.ProductListingPage.select_Product(ProductListingPage.java:30)
+	at stepDefinitions.ProductPageSteps.choose_to_buy_the_first_item(ProductPageSteps.java:22)
+	at ✽.choose to buy the first item(file:///C:/Workspace/CucumberFramework/src/test/resources/functionalTests/End2End_Tests.feature:7)
+
+  And moves to checkout from mini cart                                      # stepDefinitions.CartPageSteps.moves_to_checkout_from_mini_cart()
+  And enter "Lakshay" personal details on checkout page                     # stepDefinitions.CheckoutPageSteps.enter_personal_details_on_checkout_page(java.lang.String)
+  And select same delivery address                                          # stepDefinitions.CheckoutPageSteps.select_same_delivery_address()
+  And select payment method as "check" payment                              # stepDefinitions.CheckoutPageSteps.select_payment_method_as_payment(java.lang.String)
+  And place the order                                                       # stepDefinitions.CheckoutPageSteps.place_the_order()
+  Then verify the order details                                             # stepDefinitions.ConfirmationPageSteps.verify_the_order_details()
+aftersteps executed here
+
+@second
+Scenario: second scenario    # src/test/resources/functionalTests/End2End_Tests.feature:20
+Oct 28, 2022 11:40:02 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected upstream dialect: W3C
+beforesteps executed here
+  Given user is on Home Page # stepDefinitions.HomePageSteps.user_is_on_Home_Page()
+  When he search for "dress" # stepDefinitions.HomePageSteps.he_search_for(java.lang.String)
+aftersteps executed here
+after all scenarios executed here
+?????????????????????????????????????????????????????????????????????????????????????
+? Share your Cucumber Report with your team at https://reports.cucumber.io          ?
+? Activate publishing with one of the following:                                    ?
+?                                                                                   ?
+? src/test/resources/cucumber.properties:          cucumber.publish.enabled=true    ?
+? src/test/resources/junit-platform.properties:    cucumber.publish.enabled=true    ?
+? Environment variable:                            CUCUMBER_PUBLISH_ENABLED=true    ?
+? JUnit:                                           @CucumberOptions(publish = true) ?
+?                                                                                   ?
+? More information at https://cucumber.io/docs/cucumber/environment-variables/      ?
+?                                                                                   ?
+? Disable this message with one of the following:                                   ?
+?                                                                                   ?
+? src/test/resources/cucumber.properties:          cucumber.publish.quiet=true      ?
+? src/test/resources/junit-platform.properties:    cucumber.publish.quiet=true      ?
+?????????????????????????????????????????????????????????????????????????????????????
+Tests run: 13, Failures: 0, Errors: 2, Skipped: 6, Time elapsed: 7.278 sec <<< FAILURE!
+choose to buy the first item(Customer place an order by purchasing an item from search)  Time elapsed: 0.642 sec  <<< ERROR!
+org.openqa.selenium.WebDriverException: unknown error: session deleted because of page crash
+from tab crashed
+  (Session info: chrome=94.0.4606.61)
+Build info: version: '4.5.0', revision: 'fe167b119a'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [fc82c2be0636520e8958bd43cc0a4c0a, clickElement {id=bb603f79-c9e9-47f3-b898-8c76213a6a54}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.61, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: /tmp/.com.google.Chrome.A6Fuxu}, goog:chromeOptions: {debuggerAddress: localhost:42123}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: fc82c2be0636520e8958bd43cc0...}
+Element: [[RemoteWebDriver: chrome on LINUX (fc82c2be0636520e8958bd43cc0a4c0a)] -> css selector: .noo-product-inner]
+Session ID: fc82c2be0636520e8958bd43cc0a4c0a
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at pageObjects.ProductListingPage.select_Product(ProductListingPage.java:30)
+	at stepDefinitions.ProductPageSteps.choose_to_buy_the_first_item(ProductPageSteps.java:22)
+	at ?.choose to buy the first item(file:///C:/Workspace/CucumberFramework/src/test/resources/functionalTests/End2End_Tests.feature:7)
+
+Customer place an order by purchasing an item from search  Time elapsed: 0.012 sec  <<< ERROR!
+org.openqa.selenium.WebDriverException: unknown error: session deleted because of page crash
+from tab crashed
+  (Session info: chrome=94.0.4606.61)
+Build info: version: '4.5.0', revision: 'fe167b119a'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [fc82c2be0636520e8958bd43cc0a4c0a, clickElement {id=bb603f79-c9e9-47f3-b898-8c76213a6a54}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.61, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: /tmp/.com.google.Chrome.A6Fuxu}, goog:chromeOptions: {debuggerAddress: localhost:42123}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: fc82c2be0636520e8958bd43cc0...}
+Element: [[RemoteWebDriver: chrome on LINUX (fc82c2be0636520e8958bd43cc0a4c0a)] -> css selector: .noo-product-inner]
+Session ID: fc82c2be0636520e8958bd43cc0a4c0a
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at pageObjects.ProductListingPage.select_Product(ProductListingPage.java:30)
+	at stepDefinitions.ProductPageSteps.choose_to_buy_the_first_item(ProductPageSteps.java:22)
+	at ?.choose to buy the first item(file:///C:/Workspace/CucumberFramework/src/test/resources/functionalTests/End2End_Tests.feature:7)
+
+
+Results :
+
+Tests in error: 
+  choose to buy the first item(Customer place an order by purchasing an item from search): unknown error: session deleted because of page crash(..)
+  Customer place an order by purchasing an item from search: unknown error: session deleted because of page crash(..)
+
+Tests run: 13, Failures: 0, Errors: 2, Skipped: 6
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  9.455 s
+[INFO] Finished at: 2022-10-28T11:40:05+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test (default-test) on project CucumberFramework: There are test failures.
+[ERROR] 
+[ERROR] Please refer to C:\Workspace\CucumberFramework\target\surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< ToolsQA:CucumberFramework >----------------------
+[INFO] Building CucumberFramework 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ CucumberFramework ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Workspace\CucumberFramework\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ CucumberFramework ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ CucumberFramework ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ CucumberFramework ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ CucumberFramework ---
+[INFO] Surefire report directory: C:\Workspace\CucumberFramework\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running runners.TestRunner
+before all scenarios executed here
+
+Scenario Outline: Customer place an order by purchasing an item from search # src/test/resources/functionalTests/End2End_Tests.feature:17
+Oct 28, 2022 11:40:09 AM org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer createTracer
+INFO: Using OpenTelemetry for tracing
+log4j:WARN No appenders could be found for logger (io.netty.util.internal.logging.InternalLoggerFactory).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Oct 28, 2022 11:40:10 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected upstream dialect: W3C
+beforesteps executed here
+  Given user is on Home Page                                                # stepDefinitions.HomePageSteps.user_is_on_Home_Page()
+  When he search for "dress"                                                # stepDefinitions.HomePageSteps.he_search_for(java.lang.String)
+  And choose to buy the first item                                          # stepDefinitions.ProductPageSteps.choose_to_buy_the_first_item()
+  And moves to checkout from mini cart                                      # stepDefinitions.CartPageSteps.moves_to_checkout_from_mini_cart()
+      org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Please select some product options before adding this product to your cart.}
+  (Session info: chrome=94.0.4606.61): Please select some product options before adding this product to your cart.
+Build info: version: '4.5.0', revision: 'fe167b119a'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [e54b6f97c972526e6ed063f23ba8d6c4, findElement {using=css selector, value=.cart-button}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.61, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: /tmp/.com.google.Chrome.p5spXB}, goog:chromeOptions: {debuggerAddress: localhost:34899}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: e54b6f97c972526e6ed063f23ba...}
+Session ID: e54b6f97c972526e6ed063f23ba8d6c4
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:131)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy27.click(Unknown Source)
+	at pageObjects.CartPage.clickOn_Cart(CartPage.java:23)
+	at stepDefinitions.CartPageSteps.moves_to_checkout_from_mini_cart(CartPageSteps.java:18)
+	at ✽.moves to checkout from mini cart(file:///C:/Workspace/CucumberFramework/src/test/resources/functionalTests/End2End_Tests.feature:8)
+
+  And enter "Lakshay" personal details on checkout page                     # stepDefinitions.CheckoutPageSteps.enter_personal_details_on_checkout_page(java.lang.String)
+  And select same delivery address                                          # stepDefinitions.CheckoutPageSteps.select_same_delivery_address()
+  And select payment method as "check" payment                              # stepDefinitions.CheckoutPageSteps.select_payment_method_as_payment(java.lang.String)
+  And place the order                                                       # stepDefinitions.CheckoutPageSteps.place_the_order()
+  Then verify the order details                                             # stepDefinitions.ConfirmationPageSteps.verify_the_order_details()
+aftersteps executed here
+
+@second
+Scenario: second scenario    # src/test/resources/functionalTests/End2End_Tests.feature:20
+Oct 28, 2022 11:40:13 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected upstream dialect: W3C
+beforesteps executed here
+  Given user is on Home Page # stepDefinitions.HomePageSteps.user_is_on_Home_Page()
+  When he search for "dress" # stepDefinitions.HomePageSteps.he_search_for(java.lang.String)
+aftersteps executed here
+after all scenarios executed here
+?????????????????????????????????????????????????????????????????????????????????????
+? Share your Cucumber Report with your team at https://reports.cucumber.io          ?
+? Activate publishing with one of the following:                                    ?
+?                                                                                   ?
+? src/test/resources/cucumber.properties:          cucumber.publish.enabled=true    ?
+? src/test/resources/junit-platform.properties:    cucumber.publish.enabled=true    ?
+? Environment variable:                            CUCUMBER_PUBLISH_ENABLED=true    ?
+? JUnit:                                           @CucumberOptions(publish = true) ?
+?                                                                                   ?
+? More information at https://cucumber.io/docs/cucumber/environment-variables/      ?
+?                                                                                   ?
+? Disable this message with one of the following:                                   ?
+?                                                                                   ?
+? src/test/resources/cucumber.properties:          cucumber.publish.quiet=true      ?
+? src/test/resources/junit-platform.properties:    cucumber.publish.quiet=true      ?
+?????????????????????????????????????????????????????????????????????????????????????
+Tests run: 13, Failures: 0, Errors: 2, Skipped: 5, Time elapsed: 7.339 sec <<< FAILURE!
+moves to checkout from mini cart(Customer place an order by purchasing an item from search)  Time elapsed: 0.031 sec  <<< ERROR!
+org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Please select some product options before adding this product to your cart.}
+  (Session info: chrome=94.0.4606.61): Please select some product options before adding this product to your cart.
+Build info: version: '4.5.0', revision: 'fe167b119a'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [e54b6f97c972526e6ed063f23ba8d6c4, findElement {using=css selector, value=.cart-button}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.61, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: /tmp/.com.google.Chrome.p5spXB}, goog:chromeOptions: {debuggerAddress: localhost:34899}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: e54b6f97c972526e6ed063f23ba...}
+Session ID: e54b6f97c972526e6ed063f23ba8d6c4
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:131)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy27.click(Unknown Source)
+	at pageObjects.CartPage.clickOn_Cart(CartPage.java:23)
+	at stepDefinitions.CartPageSteps.moves_to_checkout_from_mini_cart(CartPageSteps.java:18)
+	at ?.moves to checkout from mini cart(file:///C:/Workspace/CucumberFramework/src/test/resources/functionalTests/End2End_Tests.feature:8)
+
+Customer place an order by purchasing an item from search  Time elapsed: 0.068 sec  <<< ERROR!
+org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Please select some product options before adding this product to your cart.}
+  (Session info: chrome=94.0.4606.61): Please select some product options before adding this product to your cart.
+Build info: version: '4.5.0', revision: 'fe167b119a'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [e54b6f97c972526e6ed063f23ba8d6c4, findElement {using=css selector, value=.cart-button}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.61, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: /tmp/.com.google.Chrome.p5spXB}, goog:chromeOptions: {debuggerAddress: localhost:34899}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: e54b6f97c972526e6ed063f23ba...}
+Session ID: e54b6f97c972526e6ed063f23ba8d6c4
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:131)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy27.click(Unknown Source)
+	at pageObjects.CartPage.clickOn_Cart(CartPage.java:23)
+	at stepDefinitions.CartPageSteps.moves_to_checkout_from_mini_cart(CartPageSteps.java:18)
+	at ?.moves to checkout from mini cart(file:///C:/Workspace/CucumberFramework/src/test/resources/functionalTests/End2End_Tests.feature:8)
+
+
+Results :
+
+Tests in error: 
+  moves to checkout from mini cart(Customer place an order by purchasing an item from search): unexpected alert open: {Alert text : Please select some product options before adding this product to your cart.}(..)
+  Customer place an order by purchasing an item from search: unexpected alert open: {Alert text : Please select some product options before adding this product to your cart.}(..)
+
+Tests run: 13, Failures: 0, Errors: 2, Skipped: 5
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  9.695 s
+[INFO] Finished at: 2022-10-28T11:40:16+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test (default-test) on project CucumberFramework: There are test failures.
+[ERROR] 
+[ERROR] Please refer to C:\Workspace\CucumberFramework\target\surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< ToolsQA:CucumberFramework >----------------------
+[INFO] Building CucumberFramework 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ CucumberFramework ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Workspace\CucumberFramework\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ CucumberFramework ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ CucumberFramework ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ CucumberFramework ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19.1:test (default-test) @ CucumberFramework ---
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit47/2.19.1/surefire-junit47-2.19.1.pom
+Progress (1): 2.7/6.2 kBProgress (1): 5.5/6.2 kBProgress (1): 6.2 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit47/2.19.1/surefire-junit47-2.19.1.pom (6.2 kB at 13 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/2.19.1/surefire-providers-2.19.1.pom
+Progress (1): 2.6 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/2.19.1/surefire-providers-2.19.1.pom (2.6 kB at 28 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit48/2.19.1/common-junit48-2.19.1.pom
+Progress (1): 2.7/3.1 kBProgress (1): 3.1 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit48/2.19.1/common-junit48-2.19.1.pom (3.1 kB at 30 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit4/2.19.1/common-junit4-2.19.1.pom
+Progress (1): 2.1 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit4/2.19.1/common-junit4-2.19.1.pom (2.1 kB at 25 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit3/2.19.1/common-junit3-2.19.1.pom
+Progress (1): 1.6 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit3/2.19.1/common-junit3-2.19.1.pom (1.6 kB at 18 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/2.19.1/common-java5-2.19.1.pom
+Progress (1): 2.7 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/2.19.1/common-java5-2.19.1.pom (2.7 kB at 30 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/0.9/maven-shared-utils-0.9.pom
+Progress (1): 2.7/6.2 kBProgress (1): 5.5/6.2 kBProgress (1): 6.2 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/0.9/maven-shared-utils-0.9.pom (6.2 kB at 120 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-grouper/2.19.1/surefire-grouper-2.19.1.pom
+Progress (1): 2.6 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-grouper/2.19.1/surefire-grouper-2.19.1.pom (2.6 kB at 50 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit47/2.19.1/surefire-junit47-2.19.1.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit48/2.19.1/common-junit48-2.19.1.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/2.19.1/common-java5-2.19.1.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit3/2.19.1/common-junit3-2.19.1.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit4/2.19.1/common-junit4-2.19.1.jar
+Progress (1): 4.1/44 kBProgress (1): 8.2/44 kBProgress (1): 12/44 kB Progress (1): 16/44 kBProgress (1): 20/44 kBProgress (1): 25/44 kBProgress (1): 29/44 kBProgress (1): 33/44 kBProgress (1): 37/44 kBProgress (1): 41/44 kBProgress (1): 44 kB   Progress (2): 44 kB | 2.7/12 kBProgress (2): 44 kB | 5.5/12 kBProgress (2): 44 kB | 8.2/12 kBProgress (2): 44 kB | 11/12 kB Progress (2): 44 kB | 12 kB   Progress (3): 44 kB | 12 kB | 2.7/23 kBProgress (4): 44 kB | 12 kB | 2.7/23 kB | 2.7/26 kBProgress (4): 44 kB | 12 kB | 5.5/23 kB | 2.7/26 kBProgress (4): 44 kB | 12 kB | 5.5/23 kB | 5.5/26 kBProgress (4): 44 kB | 12 kB | 8.2/23 kB | 5.5/26 kBProgress (4): 44 kB | 12 kB | 8.2/23 kB | 8.2/26 kBProgress (4): 44 kB | 12 kB | 11/23 kB | 8.2/26 kB Progress (4): 44 kB | 12 kB | 11/23 kB | 11/26 kB                                                  Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/2.19.1/common-java5-2.19.1.jar (44 kB at 613 kB/s)
+Progress (3): 12 kB | 14/23 kB | 11/26 kBProgress (3): 12 kB | 14/23 kB | 14/26 kBProgress (3): 12 kB | 16/23 kB | 14/26 kBProgress (3): 12 kB | 16/23 kB | 16/26 kBProgress (3): 12 kB | 19/23 kB | 16/26 kBProgress (3): 12 kB | 22/23 kB | 16/26 kBProgress (3): 12 kB | 22/23 kB | 19/26 kBProgress (4): 12 kB | 22/23 kB | 19/26 kB | 4.1/153 kBProgress (4): 12 kB | 23 kB | 19/26 kB | 4.1/153 kB   Progress (4): 12 kB | 23 kB | 19/26 kB | 8.2/153 kBProgress (4): 12 kB | 23 kB | 21/26 kB | 8.2/153 kBProgress (4): 12 kB | 23 kB | 21/26 kB | 12/153 kB Progress (4): 12 kB | 23 kB | 24/26 kB | 12/153 kBProgress (4): 12 kB | 23 kB | 24/26 kB | 16/153 kBProgress (4): 12 kB | 23 kB | 26 kB | 16/153 kB                                                  Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/0.9/maven-shared-utils-0.9.jar
+Progress (4): 12 kB | 23 kB | 26 kB | 20/153 kBProgress (4): 12 kB | 23 kB | 26 kB | 25/153 kBProgress (4): 12 kB | 23 kB | 26 kB | 29/153 kBProgress (4): 12 kB | 23 kB | 26 kB | 33/153 kBProgress (4): 12 kB | 23 kB | 26 kB | 37/153 kBProgress (4): 12 kB | 23 kB | 26 kB | 41/153 kBProgress (4): 12 kB | 23 kB | 26 kB | 45/153 kBProgress (4): 12 kB | 23 kB | 26 kB | 49/153 kBProgress (4): 12 kB | 23 kB | 26 kB | 53/153 kB                                               Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit3/2.19.1/common-junit3-2.19.1.jar (12 kB at 122 kB/s)
+Progress (3): 23 kB | 26 kB | 57/153 kBProgress (3): 23 kB | 26 kB | 61/153 kBProgress (3): 23 kB | 26 kB | 66/153 kBProgress (3): 23 kB | 26 kB | 70/153 kBProgress (3): 23 kB | 26 kB | 74/153 kBProgress (3): 23 kB | 26 kB | 78/153 kBProgress (3): 23 kB | 26 kB | 82/153 kB                                       Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-grouper/2.19.1/surefire-grouper-2.19.1.jar
+Progress (3): 23 kB | 26 kB | 86/153 kBProgress (3): 23 kB | 26 kB | 90/153 kB                                       Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit48/2.19.1/common-junit48-2.19.1.jar (23 kB at 214 kB/s)
+Progress (2): 26 kB | 94/153 kBProgress (2): 26 kB | 98/153 kBProgress (2): 26 kB | 102/153 kBProgress (2): 26 kB | 106/153 kBProgress (2): 26 kB | 111/153 kBProgress (2): 26 kB | 115/153 kBProgress (2): 26 kB | 119/153 kBProgress (2): 26 kB | 123/153 kBProgress (2): 26 kB | 127/153 kBProgress (2): 26 kB | 131/153 kBProgress (2): 26 kB | 135/153 kBProgress (2): 26 kB | 139/153 kBProgress (2): 26 kB | 143/153 kBProgress (2): 26 kB | 147/153 kBProgress (2): 26 kB | 152/153 kBProgress (2): 26 kB | 153 kB    Progress (3): 26 kB | 153 kB | 2.7/38 kBProgress (4): 26 kB | 153 kB | 2.7/38 kB | 4.1/172 kBProgress (4): 26 kB | 153 kB | 5.5/38 kB | 4.1/172 kBProgress (4): 26 kB | 153 kB | 5.5/38 kB | 8.2/172 kBProgress (4): 26 kB | 153 kB | 8.2/38 kB | 8.2/172 kBProgress (4): 26 kB | 153 kB | 8.2/38 kB | 12/172 kB Progress (4): 26 kB | 153 kB | 11/38 kB | 12/172 kB Progress (4): 26 kB | 153 kB | 11/38 kB | 16/172 kBProgress (4): 26 kB | 153 kB | 14/38 kB | 16/172 kBProgress (4): 26 kB | 153 kB | 14/38 kB | 20/172 kBProgress (4): 26 kB | 153 kB | 16/38 kB | 20/172 kBProgress (4): 26 kB | 153 kB | 16/38 kB | 25/172 kBProgress (4): 26 kB | 153 kB | 19/38 kB | 25/172 kBProgress (4): 26 kB | 153 kB | 19/38 kB | 29/172 kBProgress (4): 26 kB | 153 kB | 19/38 kB | 33/172 kBProgress (4): 26 kB | 153 kB | 21/38 kB | 33/172 kBProgress (4): 26 kB | 153 kB | 21/38 kB | 37/172 kBProgress (4): 26 kB | 153 kB | 24/38 kB | 37/172 kBProgress (4): 26 kB | 153 kB | 24/38 kB | 41/172 kBProgress (4): 26 kB | 153 kB | 27/38 kB | 41/172 kBProgress (4): 26 kB | 153 kB | 27/38 kB | 45/172 kBProgress (4): 26 kB | 153 kB | 30/38 kB | 45/172 kBProgress (4): 26 kB | 153 kB | 30/38 kB | 49/172 kBProgress (4): 26 kB | 153 kB | 32/38 kB | 49/172 kBProgress (4): 26 kB | 153 kB | 35/38 kB | 49/172 kBProgress (4): 26 kB | 153 kB | 38/38 kB | 49/172 kBProgress (4): 26 kB | 153 kB | 38 kB | 49/172 kB   Progress (4): 26 kB | 153 kB | 38 kB | 53/172 kBProgress (4): 26 kB | 153 kB | 38 kB | 57/172 kBProgress (4): 26 kB | 153 kB | 38 kB | 61/172 kBProgress (4): 26 kB | 153 kB | 38 kB | 66/172 kBProgress (4): 26 kB | 153 kB | 38 kB | 70/172 kBProgress (4): 26 kB | 153 kB | 38 kB | 74/172 kBProgress (4): 26 kB | 153 kB | 38 kB | 78/172 kBProgress (4): 26 kB | 153 kB | 38 kB | 82/172 kBProgress (4): 26 kB | 153 kB | 38 kB | 86/172 kBProgress (4): 26 kB | 153 kB | 38 kB | 90/172 kBProgress (4): 26 kB | 153 kB | 38 kB | 94/172 kBProgress (4): 26 kB | 153 kB | 38 kB | 98/172 kBProgress (4): 26 kB | 153 kB | 38 kB | 102/172 kBProgress (4): 26 kB | 153 kB | 38 kB | 106/172 kBProgress (4): 26 kB | 153 kB | 38 kB | 111/172 kBProgress (4): 26 kB | 153 kB | 38 kB | 115/172 kBProgress (4): 26 kB | 153 kB | 38 kB | 119/172 kBProgress (4): 26 kB | 153 kB | 38 kB | 123/172 kBProgress (4): 26 kB | 153 kB | 38 kB | 127/172 kBProgress (4): 26 kB | 153 kB | 38 kB | 131/172 kBProgress (4): 26 kB | 153 kB | 38 kB | 135/172 kBProgress (4): 26 kB | 153 kB | 38 kB | 139/172 kBProgress (4): 26 kB | 153 kB | 38 kB | 143/172 kBProgress (4): 26 kB | 153 kB | 38 kB | 147/172 kBProgress (4): 26 kB | 153 kB | 38 kB | 152/172 kBProgress (4): 26 kB | 153 kB | 38 kB | 156/172 kBProgress (4): 26 kB | 153 kB | 38 kB | 160/172 kBProgress (4): 26 kB | 153 kB | 38 kB | 164/172 kBProgress (4): 26 kB | 153 kB | 38 kB | 168/172 kBProgress (4): 26 kB | 153 kB | 38 kB | 172 kB                                                 Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit47/2.19.1/surefire-junit47-2.19.1.jar (153 kB at 941 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-grouper/2.19.1/surefire-grouper-2.19.1.jar (38 kB at 573 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit4/2.19.1/common-junit4-2.19.1.jar (26 kB at 142 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/0.9/maven-shared-utils-0.9.jar (172 kB at 1.3 MB/s)
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Error: Could not find or load main class ${coverageAgent}
+Caused by: java.lang.ClassNotFoundException: ${coverageAgent}
+
+Results :
+
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.129 s
+[INFO] Finished at: 2022-10-28T11:45:48+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.19.1:test (default-test) on project CucumberFramework: ExecutionException The forked VM terminated without properly saying goodbye. VM crash or System.exit called?
+[ERROR] Command was cmd.exe /X /C ""C:\Program Files\Java\jdk-17.0.5\bin\java" -Xmx2048m -Dvitam.tmp.folder=/tmp ${coverageAgent} -jar C:\Workspace\CucumberFramework\target\surefire\surefirebooter1132770696278592440.jar C:\Workspace\CucumberFramework\target\surefire\surefire4600026283538406390tmp C:\Workspace\CucumberFramework\target\surefire\surefire_0225430544226528049tmp"
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< ToolsQA:CucumberFramework >----------------------
+[INFO] Building CucumberFramework 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ CucumberFramework ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Workspace\CucumberFramework\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ CucumberFramework ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ CucumberFramework ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ CucumberFramework ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19.1:test (default-test) @ CucumberFramework ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Error: Could not find or load main class ${coverageAgent}
+Caused by: java.lang.ClassNotFoundException: ${coverageAgent}
+
+Results :
+
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.611 s
+[INFO] Finished at: 2022-10-28T11:45:51+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.19.1:test (default-test) on project CucumberFramework: ExecutionException The forked VM terminated without properly saying goodbye. VM crash or System.exit called?
+[ERROR] Command was cmd.exe /X /C ""C:\Program Files\Java\jdk-17.0.5\bin\java" -Xmx2048m -Dvitam.tmp.folder=/tmp ${coverageAgent} -jar C:\Workspace\CucumberFramework\target\surefire\surefirebooter8796871352288318163.jar C:\Workspace\CucumberFramework\target\surefire\surefire17779674816245722117tmp C:\Workspace\CucumberFramework\target\surefire\surefire_011071860163050198060tmp"
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< ToolsQA:CucumberFramework >----------------------
+[INFO] Building CucumberFramework 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ CucumberFramework ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Workspace\CucumberFramework\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ CucumberFramework ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ CucumberFramework ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ CucumberFramework ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19.1:test (default-test) @ CucumberFramework ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Error: Could not find or load main class ${coverageAgent}
+Caused by: java.lang.ClassNotFoundException: ${coverageAgent}
+
+Results :
+
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.633 s
+[INFO] Finished at: 2022-10-28T11:45:54+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.19.1:test (default-test) on project CucumberFramework: ExecutionException The forked VM terminated without properly saying goodbye. VM crash or System.exit called?
+[ERROR] Command was cmd.exe /X /C ""C:\Program Files\Java\jdk-17.0.5\bin\java" -Xmx2048m -Dvitam.tmp.folder=/tmp ${coverageAgent} -jar C:\Workspace\CucumberFramework\target\surefire\surefirebooter14694548798192838141.jar C:\Workspace\CucumberFramework\target\surefire\surefire12979182565462998227tmp C:\Workspace\CucumberFramework\target\surefire\surefire_0423348292641369571tmp"
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
